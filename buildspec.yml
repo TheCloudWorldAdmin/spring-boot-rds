@@ -15,19 +15,19 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk8
+      java: corretto11
   build:
     commands:
       - java -version
-      - mvn package
+ #     - mvn package
   build:
     commands:
       - mvn clean install
 artifacts:
   files:
     - target/accessing-data-mysql-complete-0.0.1-SNAPSHOT.jar
-    - appspec.yml
-    - beforeinstall.sh
-    - applicationstart.sh
+#    - appspec.yml
+#    - beforeinstall.sh
+#    - applicationstart.sh
   discard-paths: yes
 
